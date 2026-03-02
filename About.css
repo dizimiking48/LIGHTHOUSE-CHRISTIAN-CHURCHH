@@ -1,0 +1,145 @@
+/* ===== PREMIUM CHURCH ABOUT STYLE ===== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Poppins:wght@300;400;500&display=swap');
+
+/* RESET & BODY */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #0d1b2a;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background: #08121c;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-family: 'Cinzel', serif;
+  color: #d4af37;
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #d4af37;
+}
+
+/* HERO SECTION */
+.hero {
+  padding: 120px 8% 80px;
+  text-align: center;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+              url("images/church-bg.jpg") center/cover no-repeat;
+}
+
+.hero h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 3rem;
+  color: #d4af37;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  color: #ccc;
+  font-size: 1.2rem;
+}
+
+/* ABOUT CARDS CONTAINER */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 60px 8%;
+}
+
+/* ABOUT CARDS */
+.card {
+  background: rgba(255,255,255,0.05);
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid rgba(212,175,55,0.3);
+  backdrop-filter: blur(10px);
+  transition: all 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(212,175,55,0.5);
+  border-color: #d4af37;
+}
+
+.card h2 {
+  color: #d4af37;
+  margin-bottom: 15px;
+}
+
+.card p {
+  color: #ccc;
+  font-size: 1rem;
+}
+
+/* SCROLL REVEAL */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 1s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #08121c;
+  color: #ccc;
+  margin-top: 60px;
+  font-size: 0.9rem;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .container {
+    padding: 40px 5%;
+  }
+}
